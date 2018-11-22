@@ -21,7 +21,7 @@ class QnAViewController: UIViewController {
    
     
     @IBAction func choice1Pressed(_ sender: UIButton) {
-         LittleTextField.resignFirstResponder()
+        view.endEditing(true)
         questionLabel.text = "I love you as high as I can reach"
         if let littleText = LittleTextField.text,
             let little = Double(littleText)
@@ -32,8 +32,8 @@ class QnAViewController: UIViewController {
     }
     
     @IBAction func choice2Pressed(_ sender: UIButton) {
-         LittleTextField.resignFirstResponder()
-         questionLabel.text = "I love you as wide as I can strench"
+          view.endEditing(true)
+         questionLabel.text = "I love you as wide as I can stretch"
         if let littleText = LittleTextField.text,
             let little = Double(littleText)
         {
@@ -43,7 +43,7 @@ class QnAViewController: UIViewController {
     }
     
     @IBAction func choice3Pressed(_ sender: UIButton) {
-         LittleTextField.resignFirstResponder()
+          view.endEditing(true)
         questionLabel.text = "I love you as high as I can hop"
         if let littleText = LittleTextField.text,
             let little = Double(littleText)
@@ -57,7 +57,7 @@ class QnAViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         choice1.setBackgroundImage(UIImage(named: "reach"), for: UIControl.State.normal)
-        choice2.setBackgroundImage(UIImage(named: "strench"), for: UIControl.State.normal)
+        choice2.setBackgroundImage(UIImage(named: "stretch"), for: UIControl.State.normal)
         choice3.setBackgroundImage(UIImage(named: "hop"), for: UIControl.State.normal)
         
         choice1.setTitle("X4", for: UIControl.State.normal)
